@@ -1,0 +1,75 @@
+object AccessForm: TAccessForm
+  Left = 671
+  Top = 264
+  Caption = 'Assets'
+  ClientHeight = 480
+  ClientWidth = 640
+  Position = DesktopCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  Left = 671
+  Top = 264
+  DesignerMasterStyle = 0
+  object SearchButton: TButton
+    Position.X = 552.000000000000000000
+    Position.Y = 32.000000000000000000
+    TabOrder = 0
+    Text = 'Search'
+    TextSettings.Trimming = None
+    OnClick = SearchButtonClick
+  end
+  object SearchTermEdit: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 1
+    Position.X = 144.000000000000000000
+    Position.Y = 32.000000000000000000
+    Size.Width = 353.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object SearchLabel: TLabel
+    Position.X = 8.000000000000000000
+    Position.Y = 32.000000000000000000
+    Text = 'Search'
+    TabOrder = 2
+  end
+  object SearchResultListBox: TListBox
+    Position.X = 8.000000000000000000
+    Position.Y = 96.000000000000000000
+    Size.Width = 624.000000000000000000
+    Size.Height = 313.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    DisableFocusEffect = True
+    DefaultItemStyles.ItemStyle = ''
+    DefaultItemStyles.GroupHeaderStyle = ''
+    DefaultItemStyles.GroupFooterStyle = ''
+    Viewport.Width = 620.000000000000000000
+    Viewport.Height = 309.000000000000000000
+  end
+  object ExitButton: TButton
+    Position.X = 552.000000000000000000
+    Position.Y = 450.000000000000000000
+    TabOrder = 4
+    Text = 'Exit'
+    TextSettings.Trimming = None
+    OnClick = ExitButtonClick
+  end
+  object FireDacConnection: TFDConnection
+    Params.Strings = (
+      'StringFormat=Unicode'
+      'Database=D:\Shiraz Adam\Downloads\Assets.accdb'
+      'ReadOnly=True'
+      'DriverID=MSAcc')
+    Left = 200
+    Top = 432
+  end
+  object FireDacQuery: TFDQuery
+    Connection = FireDacConnection
+    SQL.Strings = (
+      '')
+    Left = 328
+    Top = 432
+  end
+end
