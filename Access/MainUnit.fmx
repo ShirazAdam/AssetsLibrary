@@ -59,7 +59,7 @@ object AccessForm: TAccessForm
   object FireDacConnection: TFDConnection
     Params.Strings = (
       'StringFormat=Unicode'
-      'Database=D:\Shiraz Adam\Downloads\Assets.accdb'
+      'Database=D:\Shiraz Adam\Downloads\Assets.mdb'
       'ReadOnly=True'
       'DriverID=MSAcc')
     Left = 200
