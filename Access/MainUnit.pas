@@ -44,13 +44,13 @@ end;
 procedure TAccessForm.SearchButtonClick(Sender: TObject);
 begin
   {*
-  firedacquery.SQL.Text := 'SELECT * FROM Box WHERE notes like "*:Searchterm*"';
+  firedacquery.SQL.Text := 'SELECT * FROM Box WHERE notes like *:Searchterm*';
   firedacquery.ParamByName('searchterm').AsString := searchtermedit.Text;
   *}
-  firedacquery.SQL.Text := 'SELECT * FROM Box WHERE notes like "*' + searchtermedit.Text + '*"';
+  firedacquery.SQL.Text := 'SELECT * FROM [Box] WHERE [notes] like ''*' + searchtermedit.Text + '*''';
   firedacquery.Open();
-  firedacquery.ExecSQL;
-  firedacquery.SQL.Clear;
+//  firedacquery.ExecSQL;
+//  firedacquery.SQL.Clear;
   firedacquery.Close;
 end;
 

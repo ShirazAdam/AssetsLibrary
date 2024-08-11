@@ -61,6 +61,7 @@ object AccessForm: TAccessForm
       'StringFormat=Unicode'
       'Database=D:\Shiraz Adam\Downloads\Assets.mdb'
       'ReadOnly=True'
+      'Password=nintendo'
       'DriverID=MSAcc')
     Left = 200
     Top = 432
